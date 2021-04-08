@@ -24,6 +24,8 @@ Route::view('/aboutus','aboutus');
 
 Route::view('/contactus','contactus');
 
+Route::post('/contactus','ContactController@storeForm');
+
 Route::view('/menu','menu');
 
 Route::view('/bookatable','bookatable');

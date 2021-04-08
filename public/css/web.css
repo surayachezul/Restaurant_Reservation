@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+.content .container h1{
+    text-align: left;
+}
+
 .content .container img{
     width: 90%;
 }
