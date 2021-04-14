@@ -16,8 +16,8 @@ class CreateMessageTable extends Migration
         Schema::create('messages', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('phone_numb');
-            $table->date('date','dd mm yy');
+            $table->string('phone_no');
+            $table->date('y-m-d');
             $table->string('title');
             $table->string('message',200);
             $table->timestamps();
@@ -31,6 +31,6 @@ class CreateMessageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contact_us');
+        Schema::dropIfExists('messages');
     }
 }

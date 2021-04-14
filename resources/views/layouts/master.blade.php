@@ -26,7 +26,7 @@
           <a class="nav-link active" href="/homepage">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/menu">Menu</a>
+          <a class="nav-link active" href="/chickens">Menu</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/aboutus">About Us</a>
@@ -34,14 +34,9 @@
         <li class="nav-item">
           <a class="nav-link active" href="/contactus">Contact Us</a>
         </li>
-        <li class="nav-item">
+        <li class="nav justify-content-end">
           <a class="nav-link active" href="/bookatable">Book A Table</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/register">Register</a>
         </li>
       </ul>
     </div>

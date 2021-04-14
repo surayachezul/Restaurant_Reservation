@@ -16,13 +16,13 @@ class CreateBookingTable extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('location');
-            $table->date('date','dd mm yy');
-            $table->timestamp('time');
-            $table->integer('numb_of_adult');
-            $table->integer('numb_of_child');
+            $table->date('Y-m-d');
+            $table->string('time');
+            $table->integer('adult_no');
+            $table->integer('child_no');
             $table->string('name');
-            $table->string('phone_numb');
-            $table->string('special_request',100);
+            $table->string('phone_no');
+            $table->string('special_request')->nullable();
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ class CreateBookingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('booking_a_tables');
+        Schema::dropIfExists('bookings');
     }
 }

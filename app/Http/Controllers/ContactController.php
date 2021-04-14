@@ -14,7 +14,7 @@ class ContactController extends Controller
     public function storeForm(Request $request){
         $this->validate($request, [
             'name' => 'required',
-            'phone_numb' => 'required',
+            'phone_no' => 'required',
             'date' => 'required',
             'title' => 'required',
             'message' => 'required'
@@ -25,7 +25,7 @@ class ContactController extends Controller
 
         $message = new \App\Message;
         $message->name = $request->name;
-        $message->phone_numb = $request->phone_numb;
+        $message->phone_no = $request->phone_no;
         $message->date = $request->date;
         $message->title = $request->title;
         $message->message = $request->message;

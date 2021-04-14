@@ -8,8 +8,6 @@
   <div class="container" >
 
   <br>
-  <h1>Homepage</h1>
-
   <br>
   <div class = "best-seller">
     <h2 >OUR BESTSELLING!!</h2>

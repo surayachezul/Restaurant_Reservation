@@ -26,9 +26,21 @@ Route::view('/contactus','contactus');
 
 Route::post('/contactus','ContactController@storeForm');
 
-Route::view('/menu','menu');
+Route::view('/chickens','chickens');
+
+Route::view('.../rice', 'rice');
+
+Route::view('/noodles', 'noodles');
+
+Route::view('/sidedishes', 'sidedishes');
+
+Route::view('/desserts', 'desserts');
+
+Route::view('/beverages', 'beverages');
 
 Route::view('/bookatable','bookatable');
+
+Route::post('/bookatable','BookingController@storeForm');
 
 Route::view('/homepage','homepage');
 

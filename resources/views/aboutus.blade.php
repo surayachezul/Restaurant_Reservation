@@ -2,14 +2,13 @@
 
 <body>
   <div class="banner">
-  <img src="{{url('/images_folder/3.jpg')}}" alt="Image"/>
-</div>
+    <img src="{{url('/images_folder/3.jpg')}}" calt="Image"/>
+  </div>
 
 <div class="content">
   <div class="container">
     <div class="kfood"><br>
-    <h1>About Us Page</h1><br>
-    <img src="{{url('/images_folder/6.png')}}" alt="Image" /><br>
+      <img src="{{url('/images_folder/6.png')}}" alt="Image" /><br>
 
     <div class="about-section1">
       <br>
