@@ -113,15 +113,14 @@ iframe{
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
+    padding-left: 150px;
+    padding-right: 100px;
   }
   .single-menu{
     flex-basis:580px;
     margin-bottom:40px;
     padding-bottom:40px;
     border-bottom:1px solid #ddd;
-  }
-  .single-menu:nth-child(5), .single-menu:nth-child(6){
-    border-bottom:0;
   }
   .single-menu{
     display:flex;

@@ -1,15 +1,12 @@
 @extends('layouts.master')
 
-<div class="banner">
-  <img src="{{url('/images_folder/3.jpg')}}" alt="Image"/>
-</div>
+@section('content')
 
 <div class="content">
-  <div class="container" >
+  <div class="container">
 
-  <br>
-  <br>
-  <div class = "best-seller">
+
+  <div class = "best-seller p-5">
     <h2 >OUR BESTSELLING!!</h2>
     <img src = "{{url('/images_folder/10.png')}}" alt = "Spicy Cheese Bumbuk Image">
     <br>
@@ -25,7 +22,7 @@
     Try it in all the 7 different flavours including Korean favourites, Spicy Yangnyeom, Soya Garlic and Honey Butter!
     See Our Menu!
     </p>
-    <a href = # class = "btn-seemenu">MENU</a>
+    <a href =/menu/chickens class = "btn-seemenu">MENU</a>
     </div>
     
     <br>
@@ -44,7 +41,7 @@
           nomadic traditions in Korea and southern Manchuria, Korean cuisine has 
           evolved through a complex interaction of the natural environment and 
           different cultural trends.</p>
-        <a href = "aboutus.html" class = "btn-readstory">READ STORY</a>
+        <a href = "/aboutus" class = "btn-readstory">READ STORY</a>
       </div>
       
       <br>
@@ -58,15 +55,15 @@
         <br>
         
         <br>
-        <a href = "location.html" class = "btn-location">FIND NEAREST LOCATION</a>
+        <a href = "/aboutus" class = "btn-location">FIND NEAREST LOCATION</a>
         <br>
         <br>
       </div>
     </div>
   </div>
-
 </div>
 
+@endsection
 
 <?php
 

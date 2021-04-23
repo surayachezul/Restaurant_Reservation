@@ -1,10 +1,6 @@
 @extends('layouts.master')
 
-<div class="banner">
-
-  <img src="{{url('/images_folder/3.jpg')}}" alt="Image"/>
-
-</div>
+@section('content')
 
 <div class="booking-form">
   <div class="container">
@@ -143,7 +139,7 @@
         <br>
         <div class="form-group row">
           <div class="offset-sm-3 col-sm-9">
-            <button type="submit" class="btn btn-primary" href = "submitform">Submit</button>
+            <button type="submit" class="btn btn-primary" href="/bookingconfirm">Submit</button>
           </div>
         </div>
         <br>
@@ -152,7 +148,4 @@
     </form>
   </section>
     
-
-<?php
-
-?>
+@endsection

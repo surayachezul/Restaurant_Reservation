@@ -1,10 +1,6 @@
 @extends('layouts.master')
 
-<div class="banner">
-
-  <img src="{{url('/images_folder/3.jpg')}}" alt="Image"/>
-
-</div>
+@section('content')
 
 <div class="form-content">
     <div class="container">
@@ -47,7 +43,7 @@
                 <div class="form-group row">
                     <label for="dateid" class="col-sm-3 col-form-label">Date</label>
                     <div class="col-sm-9">
-                        <input name="date" value="{{old('date')}}" placeholder = "yyyy-mm-dd" type="date" class="form-control" id="dateid">
+                        <input name="date" value="{{old('date')}}" type="date" class="form-control" id="dateid">
                     </div>
                 </div>
                 <br>
@@ -75,7 +71,4 @@
     </div>   
 </div>
 
-<?php
-
-
-?>
+@endsection

@@ -67,12 +67,14 @@
       Dashboard
     </a>
   </li>
+  
   <li class="nav-item {{ (Request::is('admin/masterdetail', 'admin/masterdetail/*') ? 'active' : '') }}">
     <a href="/admin/masterdetail" class="nav-link">
       <i class="bi bi-cpu-fill mr-2"></i>
       MasterDetail
     </a>
   </li>
+
   <li class="nav-item {{ (Request::is('admin/react', 'admin/react/*') ? 'active' : '') }}">
     <a href="/admin/react" class="nav-link">
       <i class="bi bi-cpu-fill mr-2"></i>

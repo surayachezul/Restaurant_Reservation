@@ -26,17 +26,23 @@ Route::view('/contactus','contactus');
 
 Route::post('/contactus','ContactController@storeForm');
 
-Route::view('/chickens','chickens');
+Route::get('/menu',function(){
+  return redirect('/menu/chickens');
+});
 
-Route::view('.../rice', 'rice');
+Route::view('/menu/chickens','chickens');
 
-Route::view('/noodles', 'noodles');
+Route::view('/menu/rice', 'rice');
 
-Route::view('/sidedishes', 'sidedishes');
+Route::view('/menu/noodles', 'noodles');
 
-Route::view('/desserts', 'desserts');
+Route::view('/menu/sidedishes', 'sidedishes');
 
-Route::view('/beverages', 'beverages');
+Route::view('/menu/desserts', 'desserts');
+
+Route::view('/menu/beverages', 'beverages');
+
+Route::view('/bookatable','bookatable');
 
 Route::view('/bookatable','bookatable');
 

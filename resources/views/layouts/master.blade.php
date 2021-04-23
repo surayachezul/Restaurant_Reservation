@@ -26,7 +26,7 @@
           <a class="nav-link active" href="/homepage">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/chickens">Menu</a>
+          <a class="nav-link active" href="/menu">Menu</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/aboutus">About Us</a>
@@ -34,7 +34,7 @@
         <li class="nav-item">
           <a class="nav-link active" href="/contactus">Contact Us</a>
         </li>
-        <li class="nav justify-content-end">
+        <li class="nav-item">
           <a class="nav-link active" href="/bookatable">Book A Table</a>
         </li>
         </li>
@@ -42,6 +42,12 @@
     </div>
   </div>
 </nav>
+
+<div class = "banner container-fluid p-0">
+  <img src="{{url('/images_folder/3.jpg')}}" calt="Image"/>
+</div>
+
+@yield('content')  
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
