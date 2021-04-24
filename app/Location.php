@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class WangsaWalkBooking extends Model
+class Location extends Model
 {
+    //
 }
