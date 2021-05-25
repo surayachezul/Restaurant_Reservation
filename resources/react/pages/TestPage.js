@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { Table, Button } from 'reactstrap';
 
 import CalendarHeatmap from 'react-calendar-heatmap'
 import 'react-calendar-heatmap/dist/styles.css'
@@ -27,46 +28,37 @@ class TestPage extends Component {
 
   render() {
     return (
-    <React.Fragment>
-    <div className="container">
-      <h1>{this.state.title}</h1>
-        <button className="btn btn-primary btn-sm"
-            onClick={()=>{
-
-                // alert('Hello');
-
-                this.setState({
-                    title: "Hello ABC"
-                })
-
-            }}
-        >Hello</button>
-
-        <hr/>
-
-      {this.props.order_id} /
-
-      {this.state.order_id}
-
-
-      {/* <h3>Heatmap</h3> */}
-{/*
-      <CalendarHeatmap
-        startDate={new Date('2021-01-01')}
-        endDate={new Date('2021-12-31')}
-        values={[
-          { date: '2021-01-01', count: 12 },
-          { date: '2021-01-22', count: 122 },
-          { date: '2021-01-30', count: 38 },
-          // ...and so on
-        ]}
-      /> */}
-
-    </div>
-    </React.Fragment>
+      <div className="container">
+        <div>
+          <h1> Restaurant Menu</h1>
+        </div>
+          <Table>
+            <thead>
+              <tr>
+                <th>Menu Code</th>
+                <th>Menu Image</th>
+                <th>Menu Title</th>
+                <th>Menu Price</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>BREAKFAST</td>
+                <td>NASI LEMAK</td>
+                <td></td>
+                <td>
+                  <Button color="success" size="sm" className="mr-2 m-1">Update</Button>
+                  <Button color="success" size="sm" className="mr-2 m-1">Add</Button>
+                  <Button color="danger" size="sm"className="mr-2 m-1" >Delete</Button>
+                </td>
+              </tr>
+            </tbody>
+          </Table>
+      </div>
     );
   }
-
 }
 
 export default TestPage;

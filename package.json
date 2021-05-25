@@ -28,6 +28,7 @@
     },
     "dependencies": {
         "react-calendar-heatmap": "^1.8.1",
-        "react-modal": "^3.12.1"
+        "react-modal": "^3.12.1",
+        "reactstrap": "^8.9.0"
     }
 }

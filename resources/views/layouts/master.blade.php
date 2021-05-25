@@ -22,7 +22,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <li class="nav-item ">
           <a class="nav-link active" href="/homepage">Home</a>
         </li>
         <li class="nav-item">
@@ -36,6 +36,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/bookatable">Book A Table</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/register">Register</a>
         </li>
         </li>
       </ul>

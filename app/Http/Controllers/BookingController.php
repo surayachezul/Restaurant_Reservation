@@ -3,12 +3,21 @@ namespace App\Http\Controllers;
 
 use Session;
 
+use \App\Location;
+
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
-    public function showForm(Request $request){
-        return view('Thank you for your booking');
+
+    public function index(){
+        $locations = Location::all();
+        return view('bookatable',
+        [
+            'locations' => $locations
+
+        ]);
+
     }
 
     public function storeForm(Request $request){
@@ -25,6 +34,8 @@ class BookingController extends Controller
         $booking->special_request = $request->special_request;
 
         $booking->save();
+
+
 
                 // $this->validate($request, [
         //     'location' => 'required',

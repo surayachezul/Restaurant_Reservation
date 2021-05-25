@@ -42,13 +42,12 @@ Route::view('/menu/desserts', 'desserts');
 
 Route::view('/menu/beverages', 'beverages');
 
-Route::view('/bookatable','bookatable');
-
-Route::view('/bookatable','bookatable');
+Route::get('/bookatable','BookingController@index');
 
 Route::post('/bookatable','BookingController@storeForm');
 
 Route::view('/homepage','homepage');
+
 
 /////////////////
 // ADMIN
@@ -58,6 +57,8 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function () {
   Route::get('/',function(){
     return redirect('/admin/dashboard');
   });
+
+  Route::resource('/menus', 'AdminMenuController');
 
   Route::get('/dashboard', 'AdminController@index');
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminTasksController extends Controller
+class AdminMenuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,27 +13,21 @@ class AdminTasksController extends Controller
      */
     public function index()
     {
-        $tasks = Task::all();
-        return view('admin.tasks_index',
+        $menus = Menu::all();
+        return view('admin.dashboard_index',
         
-        ['tasks'=>$tasks,
+        ['menus'=>$menus,
 
         
         ]);
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        $task = new \App\Task;
-        return view('admin.tasks_newedit',[
-            'task'=>$task,
-            'new_form'=>true
-        ]);
+        return view('admin.adminAddMenu');
     }
 
     /**
@@ -45,15 +39,17 @@ class AdminTasksController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'description' => 'required'
+            'category_code' => 'required',
+            'menu_image' => 'required',
+            'menu_title' => 'required',
+            'menu_price' => 'required'
           ]);
         
           $input = $request->all();
         
-          Task::create($input);
+          Menu::create($input);
         
-          Session::flash('flash_message', 'Task successfully added!');
+          Session::flash('flash_message', 'Menu successfully added!');
         
           return redirect()->back();
     }
@@ -66,11 +62,6 @@ class AdminTasksController extends Controller
      */
     public function show($id)
     {
-        $task = \App\Task::find($id);
-        return view('admin.tasks_newedit',[
-            'task'=>$task,
-            'new_form'=>false
-        ]);
     }
 
     /**
@@ -81,8 +72,6 @@ class AdminTasksController extends Controller
      */
     public function edit($id)
     {
-        $task = Task::find($id);
-        return view('tasks.edit')->with('task',$task);
     }
 
     /**
@@ -94,20 +83,22 @@ class AdminTasksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $task = Task::find($id);
+        $menu = Menu::find($id);
 
-        $this->validate($request, [
-            'title' => 'required',
-            'description' => 'required'
-        ]);
-    
-        $input = $request->all();
-    
-        $task->fill($input)->save();
-    
-        Session::flash('flash_message', 'Task successfully updated!');
-    
-        return redirect()->back();
+    $this->validate($request, [
+        'category_code' => 'required',
+        'menu_image' => 'required',
+        'menu_title' => 'required',
+        'menu_price' => 'required'
+    ]);
+
+    $input = $request->all();
+
+    $menu->fill($input)->save();
+
+    Session::flash('flash_message', 'Menu successfully updated!');
+
+    return redirect()->back();
     }
 
     /**
@@ -118,13 +109,12 @@ class AdminTasksController extends Controller
      */
     public function destroy($id)
     {
-        $task = Task::find($id);
+        $menu = Menu::find($id);
 
-        $task->delete();
+        $menu->delete();
     
-        Session::flash('flash_message', 'Task successfully deleted!');
+        Session::flash('flash_message', 'Menu successfully deleted!');
     
-        return redirect()->route('tasks.index');
+        return redirect()->route('menu.index');
     }
 }
-    

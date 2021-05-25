@@ -32,7 +32,7 @@ class ContactController extends Controller
 
         $message->save();
 
-        Session::flash('flash_message', 'Task successfully added!');
+        Session::flash('flash_message', 'Message successfully sent!');
 
         return redirect()->back();
         //return view();

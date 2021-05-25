@@ -24,3 +24,6 @@ Route::group(['middleware' => 'api'], function () {
   Route::get('test_data','TestAPIController@test_data');    
 
 });
+
+Route::get('/', [App\Http\Controller\api\AdminTasksController::class, 'index']);
+

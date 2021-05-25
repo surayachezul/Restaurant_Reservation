@@ -27,18 +27,14 @@
 
       <form action="/bookatable" method="post">
       @csrf
-        <div class="form-group row">
+        <div class="form-group">
           <label for="location" class="col-sm-3 col-form-label">Location</label>
           <div class="col-sm-9">
             <select name="location" class="form-select" type="location" id="location">
               <option selected>Select location</option>
-              <option value="ioi_putrajaya">IOI City Mall, Putrajaya</option>
-              <option value="ioi_puchong">IOI City Mall, Puchong</option>
-              <option value="klcc">Suria KLCC, Kuala Lumpur</option>
-              <option value="wangsa_walk">Wangsa Walk Mall, Wangsa Maju</option>
-              <option value="kb_mall">KB Mall, Kota Bharu</option>
-              <option value="mesra_mall">Mesra Mall, Kemaman</option>
-              <option value="sunway_pyramid">Sunway Pyramid, Kuala Lumpur</option>
+              @foreach ($locations as $location)
+              <option value="{{ $location->code_id }}">{{ $location->restaurant_name }}</option>
+              @endforeach
             </select>
           </div>
         </div>
